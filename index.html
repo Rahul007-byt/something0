@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Gift For Hunny 💖</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="petals-container" id="petalsContainer"></div>
+    <div class="bg-elements-container" id="bgElementsContainer"></div>
+
+    <!-- Passcode Modal / Lock Screen -->
+    <div class="lock-modal" id="lockModal">
+        <div class="lock-box">
+            <div class="lock-icon">🔒</div>
+            <h2>Enter Secret PIN</h2>
+            <div class="pin-inputs">
+                <input type="password" maxlength="1" class="pin-digit" autofocus>
+                <input type="password" maxlength="1" class="pin-digit">
+                <input type="password" maxlength="1" class="pin-digit">
+                <input type="password" maxlength="1" class="pin-digit">
+            </div>
+            <p class="pin-hint">Hint: your birth date and month 0612</p>
+            <p class="error-msg" id="errorMsg">Incorrect PIN, try again! 💔</p>
+            <button class="unlock-btn" id="unlockBtn">Unlock Gift 💖</button>
+        </div>
+    </div>
+
+    <!-- Letter Popup Modal -->
+    <div class="letter-modal" id="letterModal">
+        <div class="letter-paper">
+            <button class="close-letter" id="closeLetterBtn">&times;</button>
+            <h2 id="letterTitle">Title Here</h2>
+            <div class="letter-content" id="letterContent">
+                <!-- Content will load dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <div class="scene-container">
+        <!-- Greeting & 3D Gift Box Stage -->
+        <div id="giftStage" style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            <h1 id="greetingText" class="greeting-hidden">Dear Hunny Ji</h1>
+
+            <div class="gift-container" id="giftContainer">
+                <div class="gift-box" id="giftBox">
+                    <div class="gift-lid">
+                        <div class="lid-bow">🎁</div>
+                    </div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                    <div class="gift-ribbon-horizontal"></div>
+
+                    <!-- Floating items container inside gift -->
+                    <div class="gift-burst" id="giftBurst"></div>
+                </div>
+
+                <button id="openBtn" class="open-btn">Tap to open gift ♥</button>
+            </div>
+
+            <!-- Single Envelope Section -->
+            <div class="envelopes-container" id="envelopesContainer">
+                <!-- First Envelope -->
+                <div class="envelope-wrapper" id="envelope1">
+                    <div class="envelope">
+                        <div class="envelope-flap"></div>
+                        <div class="envelope-seal">💖</div>
+                    </div>
+                    <div class="envelope-label">Letter</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
